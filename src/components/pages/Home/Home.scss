@@ -1,0 +1,26 @@
+/* Import des variables et mixins */
+@import '@style/variables';
+@import '@style/mixins';
+
+/* Styles pour la page d'accueil */
+.lodging-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	background-color: $secondary-color;
+	border-radius: $border-radius-large;
+	padding: 56px 20px 6px 20px;
+}
+
+/* Responsive mobile */
+@media screen and (max-width: $breakpoint-mobil) {
+	.lodging-list {
+		display: flex;
+		flex-direction: column;
+		background-color: $white-color;
+		padding-top: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

@@ -1,0 +1,21 @@
+/* Import des variables et mixins */
+@import '@style/variables';
+@import '@style/mixins';
+
+/* Styles spécifiques au thème clair */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: $background-color;
+  }
+
+  a {
+    &:hover {
+      color: lighten($primary-color, 10%);
+    }
+  }
+
+  button {
+    background-color: $secondary-color;
+  }
+}

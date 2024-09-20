@@ -1,0 +1,84 @@
+// Mixin pour les styles de police
+@mixin font($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $font-size * 1.2;
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Mixin pour les conteneurs flex en colonne
+@mixin flex-column($align: stretch, $justify: flex-start) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// Mixin pour les conteneurs flex en ligne
+@mixin flex-row($justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin padding($padding-top: 0, $padding-right: 0, $padding-bottom: 0, $padding-left: 0) {
+  padding: $padding-top $padding-right $padding-bottom $padding-left;
+}
+
+// Mixin pour les styles de bouton
+@mixin button-style(
+  $bg-color,
+  $text-color,
+  $border-radius: 5px,
+  $padding: 10px 20px
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: $border-radius;
+  padding: $padding;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Mixin pour les styles de transition
+@mixin transition($property, $duration, $timing-function: ease) {
+  transition: $property $duration $timing-function;
+}
+
+// Mixin pour les styles d'ombre
+@mixin box-shadow($horizontal, $vertical, $blur, $color) {
+  box-shadow: $horizontal $vertical $blur $color;
+}
+
+// Mixin pour les styles d'ombre portée
+@mixin text-shadow($horizontal, $vertical, $blur, $color) {
+  text-shadow: $horizontal $vertical $blur $color;
+}
+
+// Exemple de mixin pour les tailles d'images responsive
+@mixin responsive-image($width: 100%, $height: auto) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+}

@@ -1,0 +1,81 @@
+// Import des variables et mixins
+@import '@style/variables';
+@import '@style/mixins';
+
+// Styles pour l'en-tête
+.header-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 45px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+
+    li {
+      margin-left: 50px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    font-size: $font-size-large;
+    font-weight: $font-weight-medium;
+    line-height: 34px;
+  }
+
+  img {
+    width: 210px;
+  }
+}
+
+.space-nav-link-home {
+  padding-right: $padding-large;
+}
+
+nav .active {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: $breakpoint-mobil) {
+  .header-style {
+    padding-top: 20px;
+
+    a {
+      font-size: $font-size-small;
+      line-height: 17px;
+      text-transform: uppercase;
+      &:active {
+        text-decoration: underline;
+      }
+    }
+
+    img {
+      width: 145px;
+    }
+
+    ul {
+      li {
+        margin-left: 25px;
+      }
+    }
+  }
+
+  .space-nav-link-home {
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+
+  
+}

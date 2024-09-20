@@ -1,0 +1,60 @@
+// Couleurs principales
+$primary-color: #FF6060;    // Couleur principale
+$secondary-color: #F6F6F6;  // Couleur secondaire
+$background-color: #FFFFFF; // Couleur de fond
+$text-color: #000000;       // Couleur du texte
+$white-color: #FFFFFF;      // Couleur blanche
+
+// Couleurs d'ombre
+$shadow-color: rgba(0, 0, 0, 0.3);
+
+// Tailles de police
+$font-size-small: 12px;
+$font-size-medium: 18px;
+$font-size-large: 24px;
+$font-size-xlarge: 36px;
+$font-size-xxl: 250px;
+
+// Tailles de police spécifiques
+$font-size-tiny: 9px;
+$font-size-base: 14px;
+$font-size-heading: 48px;
+
+// Poids de police
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Espacements
+$padding-small: 5px;
+$padding-medium: 10px;
+$padding-large: 15px;
+$padding-xlarge: 20px;
+
+$margin-small: 5px;
+$margin-medium: 10px;
+$margin-large: 15px;
+$margin-xlarge: 20px;
+
+// Bordures
+$border-radius-small: 5px;
+$border-radius-medium: 10px;
+$border-radius-large: 25px;
+
+// Hauteurs
+$height-small: 20px;
+$height-medium: 30px;
+$height-large: 40px;
+
+// Largeurs
+$width-small: 50px;
+$width-medium: 100px;
+$width-large: 150px;
+
+// Ombres
+$box-shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.2);
+$box-shadow-large: 0 6px 12px rgba(0, 0, 0, 0.3);
+
+// Breakpoints
+$breakpoint-mobil: 775px;

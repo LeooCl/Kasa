@@ -1,0 +1,73 @@
+/* Import des variables et mixins */
+@import "@style/variables";
+@import "@style/mixins";
+
+/* Styles pour le diaporama */
+.slider {
+	position: relative;
+	overflow: hidden;
+	height: 415px;
+	border-radius: $border-radius-large;
+	margin-top: $margin-large;
+}
+.slider-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+.slider-item-show {
+	opacity: 1;
+	object-fit: cover;
+}
+.arrow-position-to-switch {
+	@include flex-row(space-between, initial); padding-top: 150px;
+	padding-bottom: 186px;
+	position: absolute;
+	width: 100%;
+}
+.arrow-next {
+	cursor: pointer;
+	width: 47px;
+	height: 79px;
+	padding-right: 23px;
+}
+.arrow-previous {
+	cursor: pointer;
+	width: 47px;
+	height: 79px;
+	padding-left: 23px;
+}
+.counter {
+	color: $white-color;
+	padding-top: 220px;
+	font-size: $font-size-medium;
+	font-weight: $font-weight-medium;
+}
+
+/* Responsive mobile */
+@media screen and (max-width: $breakpoint-mobil) {
+	.slider {
+		height: 255px;
+		margin-top: 27px;
+	}
+	.arrow-position-to-switch {
+		padding-top: 118px;
+		padding-bottom: 117px;
+	}
+	.arrow-next {
+		width: 11px;
+		height: 20px;
+		padding-right: 6px;
+	}
+	.arrow-previous {
+		width: 11px;
+		height: 20px;
+		padding-left: 6px;
+	}
+	.counter {
+		display: none;
+	}
+}

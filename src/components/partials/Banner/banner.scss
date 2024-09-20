@@ -1,0 +1,69 @@
+/* Import des variables et mixins */
+@import "@style/variables";
+@import "@style/mixins";
+
+/* Styles pour les bannières */
+.banner-style {
+	height: 223px;
+	width: 100%;
+	img {
+		width: 100%;
+		height: 100%;
+		border-radius: $border-radius-large;
+		object-fit: cover;
+		box-shadow: $box-shadow-medium;
+	}
+}
+.title-banner {
+	position: absolute;
+	color: $white-color;
+	font-weight: $font-weight-bold;
+	font-size: $font-size-xlarge;
+	z-index: 1;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	margin: 0;
+	text-shadow: $box-shadow-medium;
+}
+.banner-style-in-home-page {
+	padding: 50px 0 50px 0;
+	
+	.banner-style {
+		position: relative;
+		img {
+			filter: brightness(45%);
+		}
+	}
+}
+.banner-style-in-about-page {
+	padding-top: 45px;
+	filter: brightness(95%);
+}
+
+/* Responsive mobile */
+@media screen and (max-width: $breakpoint-mobil) {
+	.banner-style {
+		height: 111px;
+		img {
+			border-radius: 10px;
+		}
+	}
+	.title-banner {
+		font-size: $font-size-large;
+		line-height: 24px;
+		text-align: start;
+		width: 100%;
+		left: 57%;
+		
+	}
+	.banner-style-in-home-page {
+		padding-top: 16px;
+		padding-bottom: 22px;
+	}
+	.banner-style-in-about-page {
+		padding-top: 19px;
+	}
+}

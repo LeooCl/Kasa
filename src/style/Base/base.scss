@@ -1,0 +1,69 @@
+/* Import de la police Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Import des variables et mixins */
+@import '@style/variables';
+@import '@style/mixins';
+
+/* Styles globaux */
+:root {
+  @include font-smoothing;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: $font-weight-normal;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  @media screen and (max-width: $breakpoint-mobil) {
+    max-width: 335px;
+  }
+}
+
+a {
+  @include font($font-size-medium, $font-weight-medium);
+  color: $primary-color;
+  text-decoration: inherit;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  @include font($font-size-xlarge, $font-weight-normal);
+  line-height: 1.1;
+  margin: 0;
+}
+
+button {
+  @include border-radius($border-radius-medium);
+  border: 1px solid transparent;
+  @include padding($padding-small, $padding-medium);
+  @include font($font-size-medium, $font-weight-medium);
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  &:hover {
+    border-color: $primary-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}

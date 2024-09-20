@@ -1,0 +1,148 @@
+/* Import des variables et mixins */
+@import '@style/variables';
+@import '@style/mixins';
+
+/* Styles pour les fonctionnalités */
+.informations-of-lodging {
+  @include flex-row(space-between, start);
+  position: relative;
+}
+
+.lodging-title-in-lodging-page,
+.location-of-lodging,
+.host-informations p,
+.button-tag-style button {
+  color: $primary-color;
+  font-weight: $font-weight-medium;
+}
+
+.lodging-title-in-lodging-page {
+  padding-top: 30px;
+  font-size: $font-size-xlarge;
+  line-height: 51px;
+  margin: 0;
+}
+
+.location-of-lodging {
+  font-size: $font-size-medium;
+  line-height: 26px;
+  color: $text-color;
+  margin: 0;
+}
+
+.button-tag-style {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.button-tag-style button {
+  background-color: $primary-color;
+  border-radius: $border-radius-medium;
+  border: none;
+  color: $white-color;
+  font-size: 15px;
+  line-height: 20px;
+  width: 145px;
+  height: 25px;
+  margin-right: 10px;
+  padding: 0;
+  text-align: center;
+}
+
+.host-informations {
+  @include flex-row(flex-end, center);
+  padding: 25px 0 27px 0;
+
+  p {
+    font-size: $font-size-medium;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 64px;
+    height: 64px;
+    margin-left: 5px;
+  }
+}
+
+.stars-of-lodging {
+  @include flex-row(flex-end, initial);
+
+  img {
+    padding-left: 15px;
+    width: 24px;
+    height: 24px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: $breakpoint-mobil) {
+  .informations-of-lodging {
+    @include flex-column(initial, initial);
+  }
+
+  .lodging-title-in-lodging-page {
+    padding-top: 10px;
+    font-size: $font-size-medium;
+    line-height: 25px;
+  }
+
+  .location-of-lodging {
+    font-size: 14px;
+    line-height: 19px;
+    padding-top: 5px;
+  }
+
+  .button-tag-style {
+    padding-top: 10px;
+    position: static;
+
+    button {
+      background-color: $primary-color;
+      border-radius: 5px;
+      border: none;
+      color: $white-color;
+      font-size: $font-size-tiny;
+      line-height: 14px;
+      width: 84px;
+      height: 18px;
+      margin-right: 10px;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .host-informations {
+    padding: 0;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+
+  .stars-of-lodging {
+    @include flex-row(flex-start, initial);
+    margin-top: -25px;
+
+    img {
+      padding-left: 7px;
+      padding-bottom: 5px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

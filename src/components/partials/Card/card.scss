@@ -1,0 +1,54 @@
+/* Import des variables et mixins */
+@import "@style/variables";
+@import "@style/mixins";
+
+/* Styles pour les cartes */
+.cards-in-home-page {
+	width: 28.5%;
+	height: 340px;
+	padding-bottom: $padding-xlarge;
+	a {
+		position: relative;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: $border-radius-medium;
+	}
+	h3 {
+		text-decoration: none;
+		font-weight: $font-weight-medium;
+		font-size: $font-size-medium;
+		line-height: 25px;
+		position: absolute;
+		color: $white-color;
+		bottom: 10px;
+		left: 15px;
+		right: 15px;
+	}
+}
+.overlay {
+	width: 100%;
+	height: 340px;
+	position: absolute;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+	border-radius: $border-radius-medium;
+}
+
+/* Responsive mobile */
+@media screen and (max-width: $breakpoint-mobil) {
+	.cards-in-home-page {
+		width: 100%;
+		height: 255px;
+		padding-bottom: 20px;
+		h3 {
+			left: 15px;
+			font-size: 18px;
+		}
+	}
+	.overlay {
+		height: 255px;
+		box-shadow: $box-shadow-medium;
+	}
+}

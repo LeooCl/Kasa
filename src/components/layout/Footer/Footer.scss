@@ -1,0 +1,40 @@
+// Import des variables et mixins
+@import '@style/variables';
+@import '@style/mixins';
+
+// Styles pour le pied de page
+.footer-style {
+  background-color: $text-color;
+  margin-top: $margin-xlarge;
+  position: absolute;
+  width: 100%;
+  overflow: visible;
+  left: 0;
+
+  div {
+    @include flex-row(center, center);
+  }
+
+  img {
+    padding-top: 55px;
+    padding-bottom: $padding-medium;
+  }
+
+  p {
+    color: $white-color;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-large;
+    line-height: 34px;
+  }
+}
+
+// Responsive mobile
+@media screen and (max-width: $breakpoint-mobil) {
+  .footer-style p {
+    font-size: $font-size-small;
+    line-height: 17px;
+    max-width: 100px;
+    text-align: center;
+    padding-bottom: 55px;
+  }
+}

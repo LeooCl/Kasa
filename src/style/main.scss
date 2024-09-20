@@ -1,0 +1,19 @@
+// Import des variables et mixins
+@import '@style/variables';
+@import '@style/mixins';
+
+// Import des autres fichiers SCSS
+@import '@layout/Footer/Footer.scss';
+@import '@layout/Header/Header.scss';
+
+@import '@pages/error/error.scss';
+@import '@pages/Home/Home.scss';
+
+@import '@partials/Card/Card.scss';
+@import '@partials/Banner/Banner.scss';
+@import '@partials/Features/Features.scss';
+@import '@partials/Slideshow/Slideshow.scss';
+@import '@partials/Collapse/Collapse.scss';
+
+@import '@style/Base/base.scss';
+@import '@style/Base/theme.scss';

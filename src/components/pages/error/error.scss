@@ -1,0 +1,57 @@
+@import "@style/variables";
+@import "@style/mixins";
+
+.title-error {
+	text-align: center;
+	color: $primary-color;
+	font-weight: $font-weight-bold;
+	font-size: 288px;
+	line-height: 1.5;
+	margin: 0;
+	padding-top: 100px;
+	padding-bottom: 120px;
+}
+.p-error {
+	text-align: center;
+	color: $primary-color;
+	font-weight: $font-weight-medium;
+	font-size: $font-size-large;
+	line-height: 1.5;
+	margin: 0;
+}
+.link-error {
+	text-align: center;
+	color: $primary-color;
+	display: block;
+	font-weight: $font-weight-medium;
+	font-size: $font-size-medium;
+	line-height: 1.5;
+	margin-top: 139px;
+	margin-bottom: 139px;
+	color: $text-color;
+	text-decoration: underline;
+}
+
+/* Responsive mobile */
+@media screen and (max-width: $breakpoint-mobil) {
+	.title-error {
+		font-size: 96px;
+		line-height: $font-size-xlarge;
+		padding-top: 113px;
+		padding-bottom: 113px;
+	}
+	.p-error {
+		font-size: 18px;
+		line-height: 25px;
+		span {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.link-error {
+		font-size: 14px;
+		line-height: $font-size-small;
+		margin-top: 113px;
+		margin-bottom: 113px;
+	}
+}
