@@ -54,7 +54,7 @@
       @include font($font-size-small, 300);
 
       @media screen and (min-width: 776px) {
-        @include font($font-size-large, 300);
+        @include font($font-size-medium, 300);
       }
     }
   }
@@ -111,5 +111,13 @@
   }
   .collapse {
     margin: 10px 0;
+  }
+}
+
+.equipements-collapse {
+  display: flex;
+  flex-direction: column;
+  p {
+    padding: 10px 0 10px 10px;
   }
 }

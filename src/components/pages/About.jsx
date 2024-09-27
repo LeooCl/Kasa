@@ -5,7 +5,7 @@ import image from "@/assets/imgbannerabout.png";
 import aboutArray from "../../../public/aboutArray.json";
 
 const About = () => {
-console.log(aboutArray);
+
   return (
     <>
       <main>

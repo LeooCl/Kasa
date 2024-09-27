@@ -88,10 +88,10 @@ function Lodging() {
                   aboutText={lodging.description}                
                 />
               </div>
-              <div className="collapse-in-lodging">
+              <div className="collapse-in-lodging equipements-collapse">
                 <Collapse
                   aboutTitle="Équipements"
-                  aboutText={lodging.equipments.join(", ")}
+                  aboutText={lodging.equipments}
                 />
               </div>
             </div>
